@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+<!--&lt;!&ndash;过滤器&ndash;&gt;-->
+<!--    <filter>-->
+<!--        <filter-name>Filter</filter-name>-->
+<!--        <filter-class>com.houpu.filter.EncodingFilter</filter-class>-->
+<!--    </filter>-->
+
+
+<!--    <filter-mapping>-->
+<!--        <filter-name>Filter</filter-name>-->
+<!--        <url-pattern>/*</url-pattern>-->
+<!--    </filter-mapping>-->
+
+
+  <servlet>
+      <!--用户登陆-->
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.liting.servlet.loginservlet</servlet-class>
+  </servlet>
+    <!--判断角色admin和普通用户-->
+    <servlet>
+        <servlet-name>myAccountServlet</servlet-name>
+        <servlet-class>com.liting.servlet.MysAccountServlet</servlet-class>
+    </servlet>
+    <!--用户的注册-->
+    <servlet>
+        <servlet-name>register</servlet-name>
+        <servlet-class>com.liting.servlet.registerservlet</servlet-class>
+    </servlet>
+    <!--验证码-->
+    <servlet>
+        <servlet-name>ImageCode</servlet-name>
+        <servlet-class>com.liting.servlet.imageCodeServlet</servlet-class>
+    </servlet>
+    <!--用户退出-->
+    <servlet>
+        <servlet-name>loginoutServlet</servlet-name>
+        <servlet-class>com.liting.servlet.loginoutServlet</servlet-class>
+    </servlet>
+    <!--用户修改查找-->
+    <servlet>
+        <servlet-name>findUserByIdServlet</servlet-name>
+        <servlet-class>com.liting.servlet.FindUserByIdServlet</servlet-class>
+    </servlet>
+<!--    用户激活-->
+    <servlet>
+        <servlet-name>activeUser</servlet-name>
+        <servlet-class>com.liting.servlet.activeUser</servlet-class>
+    </servlet>
+<!--    用户修改-->
+    <servlet>
+        <servlet-name>ModifyUserServlet</servlet-name>
+        <servlet-class>com.liting.servlet.ModifyUserServlet</servlet-class>
+    </servlet>
+<!--商品展示，根据category传过来的值进行跳转-->
+    <servlet>
+        <servlet-name>ShowProductByPageServlet</servlet-name>
+        <servlet-class>com.liting.servlet.ShowProductByPageServlet</servlet-class>
+    </servlet>
+<!--搜索商品-->
+    <servlet>
+        <servlet-name>FindProduvtBySearchServlet</servlet-name>
+        <servlet-class>com.liting.servlet.FindProduvtBySearchServlet</servlet-class>
+    </servlet>
+<!--查看商品详情-->
+    <servlet>
+        <servlet-name>FindProductByIdServlet</servlet-name>
+        <servlet-class>com.liting.servlet.FindProductByIdServlet</servlet-class>
+    </servlet>
+<!-- 添加商品到购物车 -->
+    <servlet>
+        <servlet-name>AddCartServlet</servlet-name>
+        <servlet-class>com.liting.servlet.AddCartServlet</servlet-class>
+    </servlet>
+<!--    修改库存-->
+    <servlet>
+        <servlet-name>changeNumServlet</servlet-name>
+        <servlet-class>com.liting.servlet.changeNumServlet</servlet-class>
+    </servlet>
+<!--    生成订单-->
+    <servlet>
+        <servlet-name>CreateOrderServlet</servlet-name>
+        <servlet-class>com.liting.servlet.CreateOrderServlet</servlet-class>
+    </servlet>
+<!--    修改支付状态-->
+    <servlet>
+        <servlet-name>updatepaystate</servlet-name>
+        <servlet-class>com.liting.servlet.updatepaystateServlet</servlet-class>
+    </servlet>
+<!--    <订单的查询-->
+    <servlet>
+        <servlet-name>findAllOrders</servlet-name>
+        <servlet-class>com.liting.servlet.FindAllOrdersServlet</servlet-class>
+    </servlet>
+    <!--    <订单的查看-->
+    <servlet>
+        <servlet-name>ShowAllOrdersInfo</servlet-name>
+        <servlet-class>com.liting.servlet.ShowAllOrdersInfoServlet</servlet-class>
+    </servlet>
+
+<!--    删除订单-->
+    <servlet>
+        <servlet-name>delorderID</servlet-name>
+        <servlet-class>com.liting.servlet.delorderIDServlet</servlet-class>
+    </servlet>
+<!--    查看所有产品-->
+    <servlet>
+        <servlet-name>findaAllproductsServlet</servlet-name>
+        <servlet-class>com.liting.servlet.findaAllproductsServlet</servlet-class>
+    </servlet>
+<!--根据条件模糊查询-->
+    <servlet>
+        <servlet-name>findProductByManyCondition</servlet-name>
+        <servlet-class>com.liting.servlet.findProductByManyConditionServlet</servlet-class>
+    </servlet>
+<!--    添加书籍-->
+    <servlet>
+        <servlet-name>AddBookServlet</servlet-name>
+        <servlet-class>com.liting.servlet.AddCommodityServlet</servlet-class>
+    </servlet>
+<!--    编辑-->
+    <servlet>
+        <servlet-name>redactServlet</servlet-name>
+        <servlet-class>com.liting.servlet.redactServlet</servlet-class>
+    </servlet>
+<!--    删除书籍-->
+    <servlet>
+        <servlet-name>DelBookServlet</servlet-name>
+        <servlet-class>com.liting.servlet.DelBookServlet</servlet-class>
+    </servlet>
+<!--    通过id查询-->
+    <servlet>
+        <servlet-name>FindIDproductsServlet</servlet-name>
+        <servlet-class>com.liting.servlet.FindIDproductsServlet</servlet-class>
+    </servlet>
+<!--    订单的模糊查询-->
+    <servlet>
+        <servlet-name>OrdersLikeServlet</servlet-name>
+        <servlet-class>com.liting.servlet.OrdersLikeServlet</servlet-class>
+    </servlet>
+<!--    查看订单详情-->
+    <servlet>
+        <servlet-name>OrderFindAll</servlet-name>
+        <servlet-class>com.liting.servlet.OrderFindAllServlet</servlet-class>
+    </servlet>
+
+<!--    admin退出-->
+    <servlet>
+        <servlet-name>adminoutServlet</servlet-name>
+        <servlet-class>com.liting.servlet.adminoutServlet</servlet-class>
+    </servlet>
+    
+<!--    删除订单-->
+    <servlet>
+        <servlet-name>adminDel</servlet-name>
+        <servlet-class>com.liting.servlet.adminDelServlet</servlet-class>
+    </servlet>
+
+
+
+
+
+    <servlet-mapping>
+        <servlet-name>adminDel</servlet-name>
+        <url-pattern>/adminDel</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>adminoutServlet</servlet-name>
+        <url-pattern>/adminoutServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderFindAll</servlet-name>
+        <url-pattern>/OrderFindAll</url-pattern>
+    </servlet-mapping>
+
+<servlet-mapping>
+    <servlet-name>OrdersLikeServlet</servlet-name>
+    <url-pattern>/OrdersLikeServlet</url-pattern>
+</servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>FindIDproductsServlet</servlet-name>
+        <url-pattern>/FindIDproductsServlet</url-pattern>
+    </servlet-mapping>
+
+
+    
+    <servlet-mapping>
+        <servlet-name>DelBookServlet</servlet-name>
+        <url-pattern>/DelBookServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>redactServlet</servlet-name>
+        <url-pattern>/redactServlet</url-pattern>
+    </servlet-mapping>
+    
+<servlet-mapping>
+    <servlet-name>AddBookServlet</servlet-name>
+    <url-pattern>/AddBookServlet</url-pattern>
+</servlet-mapping>    
+
+<servlet-mapping>
+    <servlet-name>findProductByManyCondition</servlet-name>
+    <url-pattern>/findProductByManyCondition</url-pattern>
+</servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>findaAllproductsServlet</servlet-name>
+        <url-pattern>/findAllproducts</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>delorderID</servlet-name>
+        <url-pattern>/delorderID</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>ShowAllOrdersInfo</servlet-name>
+        <url-pattern>/ShowAllOrdersInfo</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>findAllOrders</servlet-name>
+        <url-pattern>/findAllOrders</url-pattern>
+    </servlet-mapping>
+    
+    
+    <servlet-mapping>
+        <servlet-name>updatepaystate</servlet-name>
+        <url-pattern>/updatepaystate</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateOrderServlet</servlet-name>
+        <url-pattern>/CreateOrderServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>changeNumServlet</servlet-name>
+        <url-pattern>/changeNumServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>AddCartServlet</servlet-name>
+        <url-pattern>/addCartServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindProductByIdServlet</servlet-name>
+        <url-pattern>/FindProductByIdServlet</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>FindProduvtBySearchServlet</servlet-name>
+        <url-pattern>/findProduvtBySearchServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>ShowProductByPageServlet</servlet-name>
+        <url-pattern>/showProductByPage</url-pattern>
+    </servlet-mapping>
+
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>findUserByIdServlet</servlet-name>
+        <url-pattern>/findUserById</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>myAccountServlet</servlet-name>
+        <url-pattern>/myAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModifyUserServlet</servlet-name>
+        <url-pattern>/modifyUserServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ImageCode</servlet-name>
+        <url-pattern>/imageCode</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>activeUser</servlet-name>
+        <url-pattern>/activeUser</url-pattern>
+    </servlet-mapping>
+    
+    <servlet-mapping>
+        <servlet-name>loginoutServlet</servlet-name>
+        <url-pattern>/loginout</url-pattern>
+    </servlet-mapping>
+    
+
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
