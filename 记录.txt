@@ -1,0 +1,61 @@
+ 东岛服务器密码：Dongzmes123
+
+WiFi密码:073185512450
+
+mysql账号mes_pro 密码： dzmes
+
+svn地址:svn://192.168.0.200/DEV/trunk/Project/DongZ
+
+http://192.168.0.200:8088/vip mes建模平台
+http://120.78.144.178/mes/login.do?method=loginSaas# 阿里云地址
+
+http://dongz.eastarcloud.com/mes   根聚域名切换不同的项目
+http://dongz.eastarcloud.com/pad
+http://dongz.eastarcloud.com/app
+
+120.78.144.178/mes 腾讯云ip
+  
+http://localhost/mes/login.do?method=toLoginPage&pro_name=het 通过参数登录不同项目
+
+http://152.136.34.196/mes/login.do?method=toLoginPage 树根的登录
+
+wifi密码:073185512450
+
+a13472691743..
+
+Admin888. Redis密码
+
+Perfma888.mysql密码
+
+
+PID=`ps -ef | grep eladmin-system-2.5.jar | grep -v grep | awk '{ print $2 }'`
+if [ -z "$PID" ]
+then
+        echo Application is already stopped
+else
+        echo kill -9 $PID
+        kill -9 $PID
+fi
+
+根据投料类型获取生产订单过程的质检信息
+
+数据库账号密码 mes_pro  dzmes
+
+mysql 数据恢复：
+mysql  -h192.168.0.210 -umes_pro -P3306 -pdzmes --default-character-set=utf8  dongd_pro < d:\mes_pro_20210112.sql
+执行这个脚本后就可以到本地数据库对应的表找到对应的数据，相当于把服务器上的所有数据备份到了本地
+
+
+docker账号密码:
+阿里云 http://120.78.144.178/    root dztest1qaz!QAZ
+
+本地测试服务器 http://192.168.0.220/   root dz123456
+
+杜尔服务器 http://111.6.219.137:9000/   root dz1qaz@WSX
+
+
+
+
+
+
+
